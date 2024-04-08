@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Inventory {
     private ArrayList<Item> items = new ArrayList<>();
@@ -44,5 +45,18 @@ public class Inventory {
             }
         }
         return true;
+    }
+
+    public List<Item> getItems() {
+        return this.items;
+    }
+
+    public Item getItem(int id) {
+        for (Item item : items) {
+            if (item.getId() == id) {
+                return item;
+            }
+        }
+        return null;
     }
 }
