@@ -7,6 +7,10 @@ public class Main {
         Inventory inventory = new Inventory();
         Scanner scanner = new Scanner(System.in);
 
+        Menu(scanner, inventory);
+    }
+
+    private static void Menu(Scanner scanner, Inventory inventory) {
         while (true) {
             System.out.println("\nMenu:");
             System.out.println("1. Add new item");
